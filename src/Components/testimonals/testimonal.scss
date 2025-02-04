@@ -1,0 +1,41 @@
+@import "../../variables.scss";
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    .testimonial {
+        margin-bottom: 20px;
+        .testimonial-text {
+            font-size: 1.2em;
+            font-style: italic;
+          }
+          
+          .testimonial-author {
+            margin-top: 10px;
+            font-weight: bold;
+          }
+          .carousel-button {
+
+            border: none;
+            color:$thrid-color;
+            cursor: pointer;
+            font-size: 2em;
+            border-radius: 5px;
+            &:hover{
+                color:$second-color          
+               }
+          }
+        
+        }
+      
+  }
+  
+
+ 
+  
+  
+
+  

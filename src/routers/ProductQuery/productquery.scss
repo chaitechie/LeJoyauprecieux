@@ -1,0 +1,75 @@
+@import "../../responsive.scss";
+@import "../../variables.scss";
+
+.productquerycontainer{
+    overflow: hidden;
+    background: $second-color;
+    width: 100%;
+   @include sm{
+    display: flex;
+    flex-direction: column;
+   }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            height: 80vh;
+            background-color:$first-color;
+            margin: 0;
+            .querycontainer{
+                width: 80%;
+                max-width: 600px;
+                text-align: center;
+                padding: 40px;
+                border: 2px solid $thrid-color;
+                background-color: $second-color;
+                box-shadow: 10px 10px 0px $four-color;
+                @include sm{
+                    width: 60%;
+                }
+                .heading{
+                    font-size: 2rem;
+            font-weight: bold;
+            line-height: 1.3;
+            text-transform: uppercase;
+            color: $four-color;
+                }
+            .inputcontainer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 30px;
+                input{
+                    width: 80%;
+                    height:4vh;
+                    border:2px solid $first-color;       
+                    &::placeholder{
+                        font-size:12px;
+                        font-family: $main-text;
+                        font-weight: bold;
+                    }
+                }
+                textarea{
+                    width: 80%;
+                    height:6vh;
+                    &::placeholder{
+                        font-size:14px;
+                        font-family: $main-text;
+                        font-weight: bold;
+                    }
+                }
+                button{
+                    width: 200px;
+                    height:4vh;
+                    background: $four-color;
+                    outline:none;
+                    border: 2px solid $first-color;
+                    color:$first-color;
+                }
+            }
+                
+            }
+        }
+            
+    }
