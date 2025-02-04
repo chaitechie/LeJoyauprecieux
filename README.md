@@ -78,7 +78,7 @@ npm run dev
 ```
 
 ## 📷 Screenshots
-
+![main](https://github.com/chaitechie/LeJoyauprecieux/blob/main/jeweller.png)
 
 
 
