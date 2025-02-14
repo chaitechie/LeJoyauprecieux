@@ -47,9 +47,6 @@ function ProductQuery() {
               <input
                 type="email"
                 id="email"
-              
-                required
-                placeholder="Enter your email address"
                   value={userEmail}
                 required
                 placeholder="Enter your email address"
