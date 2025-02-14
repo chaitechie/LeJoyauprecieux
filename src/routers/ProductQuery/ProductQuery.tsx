@@ -10,7 +10,6 @@ function ProductQuery() {
   const [userName,setUserName] = useState<string>("");
   const [userEmail,setUserEmail] = useState<string>("");
   const [userMessage,setUserMessage] = useState<string>("");
-  const [jewellerName,setJewellerName] = useState<string>("")
 
   const { productName } = useSingleProduct();
   const handleForm = async (e: { preventDefault: () => void; }) => {
@@ -19,12 +18,12 @@ function ProductQuery() {
       await addDoc(collection(db,"querys"),{
         name:userName,
         email:userEmail,
-        productName:jewellerName,
+        productName:productName,
         message:userMessage
       })
     }
     catch(error){
-      console.log(error)
+         alert(error);
     }
   }
   return (
@@ -39,35 +38,39 @@ function ProductQuery() {
               <input
                 type="text"
                 id="name"
-                name="name"
                 required
                 placeholder="Enter your full name"
-                onChange={(e) => setUserName(e.target.name)}
+                  value={userName}
+                onChange={(e) => setUserName(e.target.value)}
               />
 
               <input
                 type="email"
                 id="email"
-                name="email"
+              
                 required
                 placeholder="Enter your email address"
-                onChange={(e) => setUserEmail(e.target.name)}
+                  value={userEmail}
+                required
+                placeholder="Enter your email address"
+                onChange={(e) => setUserEmail(e.target.value)}
               />
 
               <input
-                type="text"
+              type="text"
                 id="product"
-                name="product"
-                defaultValue={productName}
+                value={productName}
                 readOnly={true}
-                onChange={(e) => setJewellerName(e.target.name)}
+                disabled 
+                
               />
 
               <textarea
-                placeholder="Please enter your message"
+                        placeholder="Please enter your message"
                 className="message"
+                value={userMessage}
                 draggable={false}
-                onChange={(e) => setUserMessage(e.target.name)}
+                onChange={(e) => setUserMessage(e.target.value)}
               />
 
               <button type="submit" onClick={ handleForm}>Submit Inquiry</button>
